@@ -1,0 +1,42 @@
+.button {
+    transition: 0.3s ease;
+    transition-property: opacity, background-color, color;
+
+    &.is-disabled {
+        opacity: 0.6;
+    }
+
+    @include media-hover-device {
+        &--view {
+            &-brand {
+                &:hover {
+                    background-color: var(--controlBrandBackgroundHover);
+                }
+            }
+
+            &-secondary {
+                &:hover {
+                    background-color: var(--controlSecondaryBrandBackgroundHover);
+                }
+            }
+
+            &-flat-brand {
+                &:hover {
+                    color: var(--controlBrandBackgroundHover)
+                }
+            }
+
+            &-critical {
+                &:hover {
+                    background-color: var(--controlCriticalBackgroundHover);
+                }
+            }
+
+            &-flat {
+                &:hover {
+                    background-color: var(--controlFlatSystemTextHover);
+                }
+            }
+        }
+    }
+}

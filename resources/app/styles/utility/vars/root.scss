@@ -1,0 +1,60 @@
+@import './colors.scss';
+
+:root {
+    /* BASE */
+
+    --base: #{$base};
+    --system: #{$system};
+    --background: #{$background};
+    --surface: #{$surface};
+    --brand: #{$brand};
+    --interactive: #{$interactive};
+    --critical: #{$critical};
+    --success: #{$success};
+    --warning: #{$warning};
+
+    /* TEXT */
+
+    --textBase: #{$textBase};
+    --textSecondary: #{$textSecondary};
+    --textSecondaryHover: #{$textSecondaryHover};
+    --textBrand: #{$textBrand};
+    --textBrandHover: #{$textBrandHover};
+    --textCritical: #{$textCritical};
+    --textSuccess: #{$textSuccess};
+    --textWarning: #{$textWarning};
+
+    /* BACKGROUND */
+
+    --backgroundBase: #{$backgroundBase};
+    --backgroundSurface: #{$backgroundSurface};
+    --backgroundOverlayPage: #{$backgroundOverlayPage};
+    --backgroundSystem: #{$backgroundSystem};
+
+    /* BORDER */
+
+    --borderBase: #{$borderBase};
+    --borderBaseHover: #{$borderBaseHover};
+    --borderSecondary: #{$borderSecondary};
+    --borderPrimary: #{$borderPrimary};
+    --borderPrimaryHover: #{$borderPrimaryHover};
+    --borderCritical: #{$borderCritical};
+    --borderCriticalHover: #{$borderCriticalHover};
+
+    /* INTERACTIVE */
+
+    --controlBrandBackground: #{$controlBrandBackground};
+    --controlBrandBackgroundHover: #{$controlBrandBackgroundHover};
+    --controlBrandText: #{$controlBrandText};
+    --controlFlatSystemText: #{$controlFlatSystemText};
+    --controlFlatSystemTextHover: #{$controlFlatSystemTextHover};
+    --controlSecondaryBrandBackground: #{$controlSecondaryBrandBackground};
+    --controlSecondaryBrandText: #{$controlSecondaryBrandText};
+    --controlCriticalBackground: #{$controlCriticalBackground};
+    --controlCriticalBackgroundHover: #{$controlCriticalBackgroundHover};
+    --controlCriticalText: #{$controlCriticalText};
+
+    /* SHADOW */
+
+    --shadowBase: #{$shadowBase};
+}

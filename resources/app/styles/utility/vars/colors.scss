@@ -1,0 +1,58 @@
+
+/* BASE */
+
+$base:        hsla(224deg, 14%, 15%, 1);
+$system:      hsla(224deg, 15%, 65%, 1);
+$background:  hsla(225deg, 20%, 96%, 1);
+$surface:     hsla(0deg, 0%, 100%, 1);
+$brand:       hsla(149deg, 24%, 39%, 1);
+$interactive: hsla(149deg, 24%, 39%, 1);
+$critical:    hsla(5deg, 80%, 65%, 1);
+$success:     hsla(100deg, 55%, 50%, 1);
+$warning:     hsla(35deg, 100%, 65%, 1);
+
+/* TEXT */
+
+$textBase:                 $base;
+$textSecondary:            #{hsla-new($base, (l: lightness($base) + 45))};
+$textSecondaryHover:       #{hsla-new($base, (l: lightness($base) + 30))};
+$textBrand:                $brand;
+$textBrandHover:           #{hsla-new($brand, (l: lightness($brand) - 10))};
+$textCritical:             $critical;
+$textSuccess:              #{hsla-new($success, (l: lightness($success) - 15))};
+$textWarning:              #{hsla-new($warning, (l: lightness($warning) - 15))};
+
+/* BACKGROUND */
+
+$backgroundBase:                $background;
+$backgroundSurface:             $surface;
+$backgroundOverlayPage:         #{hsla-new($background, (l: lightness($background) - 61, a: 0.85))};
+$backgroundSystem:              #{hsla-new($system, (a: 0.2))};
+
+/* BORDER */
+
+$borderBase:                    #{hsla-new($background, (l: lightness($background) - 16))};
+$borderBaseHover:               #{hsla-new($background, (l: lightness($background) - 36))};
+$borderSecondary:               hsla-new($background, (l: lightness($background) - 36));
+$borderPrimary:                 $brand;
+$borderPrimaryHover:            #{hsla-new($brand, (l: lightness($brand) - 10))};
+$borderCritical:                $critical;
+$borderCriticalHover:           #{hsla-new($critical, (l: lightness($critical) - 20))};
+
+/* INTERACTIVE */
+
+$controlBrandBackground:                      $brand;
+$controlBrandBackgroundHover:                 #{hsla-new($brand, (l: lightness($brand) - 10))};
+$controlBrandText:                            #{hsla-new($base, (l: lightness($base) + 100))};
+$controlFlatSystemText:                       $system;
+$controlFlatSystemTextHover:                  #{hsla-new($system, (l: lightness($system) - 15))};
+$controlSecondaryBrandBackground:             #{hsla-new($brand, (a: 0.1))};
+$controlSecondaryBrandBackground:             #{hsla-new($brand, (l: lightness($brand) - 10, a: 0.1))};
+$controlSecondaryBrandText:                   #{hsla-new($brand, (l: lightness($brand) - 10))};
+$controlCriticalBackground:                   #{hsla-new($critical, (a: 0.15))};
+$controlCriticalBackgroundHover:              #{hsla-new($critical, (l: lightness($critical) - 15, a: 0.15))};
+$controlCriticalText:                         #{hsla-new($critical, (l: lightness($critical) - 15))};
+
+/* SHADOW */
+$shadowBase:                          0 toRem(2) toRem(12) rgba(152, 160, 179, 0.2);
+

@@ -1,0 +1,56 @@
+.input {
+    $b: &;
+
+    &.is-disabled {
+        opacity: 0.6;
+    }
+
+    &.is-filled {
+        #{$b}__icon {
+            color: var(--textBase);
+        }
+    }
+
+    &__main {
+        transition: 0.3s ease;
+        transition-property: color, border-color;
+    }
+
+    @include media-hover-device {
+        &--view {
+            &-base {
+                &:hover {
+                    #{$b}__main {
+                        border-color: var(--borderBaseHover);
+                        color: var(--textSecondaryHover);
+
+                        &::placeholder {
+                            color: var(--textSecondaryHover);
+                        }
+                    }
+
+                    #{$b}__icon {
+                        color: var(--textSecondaryHover);
+                    }
+                }
+            }
+        }
+    }
+
+    &--view {
+        &-base {
+            &.is-focus {
+                #{$b} {
+                    &__main {
+                        border-color: var(--borderPrimary);
+                        color: var(--textBase);
+                    }
+
+                    &__icon {
+                        color: var(--textBase);
+                    }
+                }
+            }
+        }
+    }
+}

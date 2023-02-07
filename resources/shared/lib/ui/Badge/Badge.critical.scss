@@ -1,0 +1,19 @@
+.badge {
+    width: toRem(12);
+    height: toRem(12);
+    border-radius: 50%;
+    color: var(--surface);
+    font-size: toRem(8);
+    line-height: toRem(12);
+    text-align: center;
+
+    &--view {
+        &-success {
+            background-color: var(--textSuccess);
+        }
+
+        &-warning {
+            background-color: var(--textWarning);
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.input {
+    $b: &;
+
+    position: relative;
+    color: var(--textSecondary);
+
+    &__main {
+        @include fontSize(p1);
+
+        width: 100%;
+        height: toRem(40);
+        padding: 0 toRem(10);
+        color: var(--textBase);
+
+        &::placeholder {
+            color: var(--textSecondary);
+        }
+    }
+
+    &.is-icon {
+        #{$b}__main {
+            padding-left: toRem(36);
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: toRem(10);
+        left: toRem(10);
+        font-size: toRem(20);
+    }
+
+    &--view {
+        &-base {
+            #{$b}__main {
+                border-radius: $borderRadiusXS;
+                border: 1px solid var(--borderBase);
+            }
+        }
+
+        &-flat {
+            #{$b}__main {
+                background-color: var(--backgroundSurface);
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    //padding-top: toRem(84);
+    justify-content: flex-end;
+    box-sizing: border-box;
+
+    &__content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__footer {
+        margin-top: auto;
+    }
+
+    @include media-tabletLate {
+        //padding-top: toRem(100);
+    }
+
+    @include media-desktop {
+        //padding-top: toRem(124);
+    }
+}

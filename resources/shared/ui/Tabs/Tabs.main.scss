@@ -1,0 +1,13 @@
+.tabs {
+    &__toggle {
+        transition: transform 0.3s ease;
+    }
+
+    &__option {
+        transition: color 0.3s ease;
+
+        &:not(.is-active):hover {
+            color: var(--textSecondaryHover);
+        }
+    }
+}

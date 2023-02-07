@@ -1,0 +1,37 @@
+.tabs {
+    @include paddingLevel(bottom, pink);
+
+    &__option {
+        @include fontSize(p2);
+
+        display: block;
+        width: 100%;
+        text-align: left;
+        color: var(--textSecondary);
+        padding: toRem(8) toRem(12);
+
+        & + & {
+            @include marginLevel(yellow, top)
+        }
+
+        &.is-active {
+            color: var(--textBrand);
+        }
+    }
+
+    &__list {
+        position: relative;
+    }
+
+    &__toggle {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: $borderRadiusXS;
+        background-color: var(--controlSecondaryBrandBackground);
+        box-sizing: border-box;
+        height: toRem(32);
+        width: 100%;
+    }
+}

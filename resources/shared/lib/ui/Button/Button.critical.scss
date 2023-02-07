@@ -1,0 +1,76 @@
+.button {
+    $b: &;
+
+    @include fontSize(p1);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+    border-radius: $borderRadiusXS;
+    padding: toRem(10) toRem(16);
+    height: toRem(40);
+
+    &__spinner {
+        @include center();
+        width: toRem(30);
+    }
+
+    &.is-icon-only {
+        height: toRem(32);
+        padding: toRem(6);
+
+        #{$b}__spinner {
+            width: toRem(25);
+        }
+    }
+
+    &__icon {
+        font-size: toRem(20);
+
+        & + #{$b}__main {
+            margin-left: toRem(4);
+        }
+
+        #{$b}__main + & {
+            margin-left: toRem(4);
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &--view {
+        &-brand {
+            color: var(--controlBrandText);
+            background-color: var(--controlBrandBackground);
+        }
+
+        &-secondary {
+            color: var(--controlSecondaryBrandText);
+            background-color: var(--controlSecondaryBrandBackground);
+        }
+
+        &-flat-brand {
+            color: var(--controlBrandBackground);
+        }
+
+        &-critical {
+            color: var(--controlCriticalText);
+            background-color: var(--controlCriticalBackground);
+        }
+
+        &-flat {
+            color: var(--controlFlatSystemText);
+        }
+    }
+}
