@@ -1,0 +1,36 @@
+.checkbox {
+    $b: &;
+
+    &__checker {
+        transition: 0.3s ease;
+        transition-property: background-color, border-color, opacity;
+    }
+
+    &.is-active {
+        #{$b}__checker {
+            background-color: var(--controlBrandBackground);
+            border-color: var(--controlBrandBackground);
+        }
+    }
+
+    @include media-hover-device {
+        &:hover {
+            #{$b}__checker {
+                border-color: var(--borderBaseHover);
+            }
+        }
+
+        &.is-active {
+            &:hover {
+                #{$b}__checker {
+                    background-color: var(--controlBrandBackgroundHover);
+                    border-color: var(--controlBrandBackgroundHover);
+                }
+            }
+        }
+    }
+
+    &.is-disabled {
+        opacity: 0.6;
+    }
+}

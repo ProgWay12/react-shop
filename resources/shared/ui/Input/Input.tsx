@@ -1,9 +1,9 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {DefaultProps, IconName, ViewPropsType} from "../../types/helpers";
 import {IconBase} from "../../lib/ui/IconBase";
 
 export type InputProps = {
-    value: string
+    value: string | number
     type?: 'text' | 'number'
     icon?: IconName
     view?: Extract<ViewPropsType, 'base' | 'flat'>
@@ -29,7 +29,7 @@ export default function Input(props: InputProps) {
             classes.push('is-disabled')
         }
 
-        if (value.length > 0) {
+        if (String(value).length > 0) {
             classes.push('is-filled')
         }
 
@@ -66,6 +66,12 @@ export default function Input(props: InputProps) {
             setValue(newValue)
         }
     }
+
+    useEffect(() => {
+        if (props.value !== value) {
+            setValue(props.value)
+        }
+    }, [props.value])
 
     return <div className={classes()}>
         {props.icon && (<IconBase className="input__icon" name={props.icon} />)}

@@ -1,0 +1,40 @@
+.checkbox {
+    @include fontSize(p1);
+
+    position: relative;
+    width: 100%;
+    height: toRem(20);
+
+    &__value {
+        cursor: pointer;
+        position: absolute;
+        width: 100%;
+        height: toRem(20);
+        z-index: 2;
+        opacity: 0;
+        margin: 0;
+    }
+
+    &__main {
+        display: flex;
+    }
+
+    &__checker {
+        width: toRem(20);
+        height: toRem(20);
+        background-color: var(--backgroundSurface);
+        border: 1px solid var(--borderBase);
+        padding: toRem(1);
+        box-sizing: border-box;
+        border-radius: toRem(5);
+    }
+
+    &__icon {
+        color: var(--controlBrandText);
+        font-size: toRem(16);
+    }
+
+    &__title {
+        margin-left: toRem(6);
+    }
+}

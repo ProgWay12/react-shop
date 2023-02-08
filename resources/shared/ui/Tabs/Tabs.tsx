@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
-import {TransitionFade} from "../../lib/ui/TransitionFade";
+import {Transition} from "../../lib/ui/Transition";
 import {DefaultProps} from "../../types/helpers";
 
 export type TabOption = {
@@ -26,9 +26,9 @@ export default function Tabs(props: TabsProps) {
 
     let timeout = {} as ReturnType<typeof setTimeout>
 
-    const toggle = <TransitionFade animationKey={isToggle}>
+    const toggle = <Transition animationName="fade" animationKey={isToggle}>
         {isToggle && (<div className="tabs__toggle" style={toggleStyles}/>)}
-    </TransitionFade>
+    </Transition>
 
     const list = <div className="tabs__list">
         {props.list.map(tab => (

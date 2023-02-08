@@ -1,0 +1,13 @@
+.select {
+    $b: &;
+
+    &__arrow {
+        transition: transform 0.3s ease;
+    }
+
+    &.is-active {
+        #{$b}__arrow {
+            transform: rotate(180deg);
+        }
+    }
+}

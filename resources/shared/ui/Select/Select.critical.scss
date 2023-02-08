@@ -1,0 +1,49 @@
+.select {
+    @include fontSize(p1);
+
+    position: relative;
+    color: var(--textSecondary);
+
+    &__main {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        padding: toRem(6);
+        box-sizing: border-box;
+        background-color: var(--backgroundSurface);
+        border: 1px solid var(--borderBase);
+        border-radius: $borderRadiusXS;
+    }
+
+    &__title {
+        &-wrapper {
+            width: auto;
+            margin-right: toRem(6);
+        }
+    }
+
+    &__arrow {
+        transform: rotate(0deg);
+        font-size: toRem(20);
+    }
+
+    &__dropdown {
+        @include marginLevel(top, yellow);
+
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        padding: 0 toRem(12);
+        box-sizing: border-box;
+        background-color: var(--backgroundSurface);
+        border: 1px solid var(--borderBase);
+        border-radius: $borderRadiusXS;
+    }
+
+    &__option {
+        cursor: pointer;
+        width: 100%;
+        padding: toRem(6) 0;
+        box-sizing: border-box;
+    }
+}

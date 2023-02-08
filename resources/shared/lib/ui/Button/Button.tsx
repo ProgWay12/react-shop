@@ -4,7 +4,7 @@ import {IconBase} from "../IconBase";
 import {useRef} from "react";
 import Spinner from "../Spinner/Spinner";
 import getOptionsByTag from "../../utils/getOptionsByTag";
-import {TransitionFade} from "../TransitionFade";
+import {Transition} from "../Transition";
 
 export type ButtonProps = {
     tag?: Extract<TagPropsType, 'button' | 'a'>
@@ -28,6 +28,18 @@ export default function Button(props: ButtonProps): JSX.Element {
 
     let timeout = {} as ReturnType<typeof setTimeout>
     let timeoutDelay = 300
+
+    useEffect(() => {
+        clearTimeout(timeout)
+
+        if (props.loading) {
+            setWidth(buttonRef.current.clientWidth)
+        } else {
+            timeout = setTimeout(() => {
+                setWidth(null)
+            }, timeoutDelay)
+        }
+    }, [props.loading])
 
     const classes = () => {
         const classes = [
@@ -63,21 +75,13 @@ export default function Button(props: ButtonProps): JSX.Element {
 
     const buttonSpinner = <Spinner className="button__spinner" view={props.view}></Spinner>
 
-    const buttonTransition = <TransitionFade animationKey={props.loading}>
-        {!props.loading ? buttonContent : buttonSpinner}
-    </TransitionFade>
-
-    useEffect(() => {
-        clearTimeout(timeout)
-
-        if (props.loading) {
-            setWidth(buttonRef.current.clientWidth)
-        } else {
-            timeout = setTimeout(() => {
-                setWidth(null)
-            }, timeoutDelay)
-        }
-    }, [props.loading])
+    const buttonTransition =
+        <Transition
+            animationKey={props.loading === true}
+            animationName="fade"
+        >
+            {!props.loading ? buttonContent : buttonSpinner}
+        </Transition>
 
     const attrs = () => {
         return{
