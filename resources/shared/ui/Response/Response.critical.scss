@@ -1,0 +1,23 @@
+.response {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        @include marginLevel(top, green);
+        @include fontSize(p1, (weight: 600));
+    }
+
+    &__description {
+        @include marginLevel(top, red);
+        @include fontSize(p1);
+
+        color: var(--textSecondary);
+    }
+
+    &__button {
+        @include marginLevel(top, green);
+
+        width: 100%;
+    }
+}

@@ -1,0 +1,24 @@
+.icon-status {
+    width: toRem(76);
+    height: toRem(76);
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: var(--controlSecondaryBrandBackground);
+    padding: toRem(8);
+
+    &__main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: var(--controlBrandBackground);
+    }
+
+    &__icon {
+        font-size: toRem(44);
+        color: var(--surface);
+    }
+}

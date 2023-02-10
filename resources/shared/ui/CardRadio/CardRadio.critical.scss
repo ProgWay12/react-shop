@@ -1,0 +1,25 @@
+.card-radio {
+    display: flex;
+    align-items: flex-start;
+    padding: toRem(16);
+    box-sizing: border-box;
+    border-radius: $borderRadiusXS;
+    border: 1px solid var(--borderBase);
+
+    &__icon {
+        color: var(--textSecondary);
+        font-size: toRem(20);
+    }
+
+    &__main {
+        margin-left: toRem(6);
+    }
+
+    &__title {
+        @include fontSize(h3, (weight: 600));
+    }
+
+    &__description {
+        @include marginLevel(top, yellow);
+    }
+}

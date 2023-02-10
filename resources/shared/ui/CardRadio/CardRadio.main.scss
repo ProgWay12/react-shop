@@ -1,0 +1,14 @@
+.card-radio {
+    $b: &;
+
+    transition: 0.3s ease;
+    transition-property: border-color, color;
+
+    &.is-checked {
+        border-color: var(--borderPrimary);
+
+        #{$b}__icon {
+            color: var(--textBrand);
+        }
+    }
+}

@@ -47,7 +47,7 @@ $controlBrandText:                            #{hsla-new($base, (l: lightness($b
 $controlFlatSystemText:                       $system;
 $controlFlatSystemTextHover:                  #{hsla-new($system, (l: lightness($system) - 15))};
 $controlSecondaryBrandBackground:             #{hsla-new($brand, (a: 0.1))};
-$controlSecondaryBrandBackground:             #{hsla-new($brand, (l: lightness($brand) - 10, a: 0.1))};
+$controlSecondaryBrandBackgroundHover:             #{hsla-new($brand, (l: lightness($brand) - 10, a: 0.1))};
 $controlSecondaryBrandText:                   #{hsla-new($brand, (l: lightness($brand) - 10))};
 $controlCriticalBackground:                   #{hsla-new($critical, (a: 0.15))};
 $controlCriticalBackgroundHover:              #{hsla-new($critical, (l: lightness($critical) - 15, a: 0.15))};

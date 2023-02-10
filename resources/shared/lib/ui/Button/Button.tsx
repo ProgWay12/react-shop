@@ -59,6 +59,10 @@ export default function Button(props: ButtonProps): JSX.Element {
             classes.push('is-icon-only')
         }
 
+        if (props.className) {
+            classes.push(props.className)
+        }
+
         return classes.join(' ')
     }
 
