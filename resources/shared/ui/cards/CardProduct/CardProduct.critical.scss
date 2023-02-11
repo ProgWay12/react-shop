@@ -1,0 +1,145 @@
+.card-product {
+    $b: &;
+
+    background-color: var(--backgroundSurface);
+    box-sizing: border-box;
+
+    &--view {
+        &-base {
+            padding: toRem(8);
+            border-radius: $borderRadiusXS;
+
+            #{$b} {
+                &__wrapper,
+                &__title,
+                &__price,
+                &__button {
+                    @include marginLevel(bottom, green);
+                }
+
+                &__button {
+                    width: 100%;
+                    opacity: 0;
+                    pointer-events: none;
+                }
+            }
+
+            &.card-product--size {
+                &-l {
+                    width: toRem(176);
+
+                    #{$b}__wrapper {
+                        width: toRem(160);
+                        height: toRem(160);
+                    }
+                }
+
+                &-s {
+                    width: toRem(136);
+
+                    #{$b}__wrapper {
+                        width: toRem(120);
+                        height: toRem(120);
+                    }
+                }
+            }
+        }
+
+        &-cart {
+            @include paddingLevel(bottom, blue);
+
+            #{$b} {
+                &__wrapper {
+                    width: toRem(80);
+                    height: toRem(80);
+                    border-radius: $borderRadiusXS
+                }
+
+                &__container {
+                    display: flex;
+                    align-items: center;
+                }
+
+                &__actions {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    overflow: hidden;
+                }
+
+                &__button {
+                    margin-left: toRem(-16)
+                }
+            }
+
+            &.card-product--size {
+                &-l {
+                    @include paddingLevel(top, blue);
+
+                    #{$b} {
+                        &__wrapper {
+                            margin-right: toRem(12);
+                        }
+
+                        &__main {
+                            width: calc(100% - #{toRem(12)});
+                        }
+
+                        &__info {
+                            @include marginLevel(bottom, yellow);
+
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+
+                &-s {
+                    #{$b} {
+                        &__wrapper {
+                            margin-right: toRem(6);
+                        }
+    
+                        &__main {
+                            width: calc(100% - #{toRem(6)});
+                        }
+
+                        &__title {
+                            @include marginLevel(bottom, yellow);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__title {
+        @include fontSize(p1);
+
+        height: toRem(40);
+    }
+
+    &__price {
+        height: toRem(28);
+        display: flex;
+        align-items: center;
+
+        span {
+            @include fontSize(h3, (weight: 600));
+        }
+    }
+
+    &__income {
+        font-size: toRem(20);
+    }
+
+    &__wrapper {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__image {
+        @include center();
+        height: 100%;
+    }
+}

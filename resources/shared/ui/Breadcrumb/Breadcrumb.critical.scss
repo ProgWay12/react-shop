@@ -1,0 +1,13 @@
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    color: var(--textSecondary);
+
+    &__title {
+        @include fontSize(p2)
+    }
+
+    &__icon {
+        font-size: toRem(16);
+    }
+}

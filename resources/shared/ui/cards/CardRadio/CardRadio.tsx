@@ -1,6 +1,6 @@
 import React from "react"
-import { IconBase } from "../../lib/ui/IconBase"
-import { IconName } from "../../types/helpers"
+import { IconBase } from "../../../lib/ui/IconBase"
+import { IconName } from "../../../types/helpers"
 
 export type CardRadioProps = {
     checked: boolean

@@ -15,6 +15,7 @@ fs.readdirSync('./dist/assets').forEach(file => {
 
 server.use('/assets', express.static('./dist/assets'))
 server.use('/fonts', express.static('./public/fonts'))
+server.use('/images', express.static('./public/images'))
 
 server.get('*', async (req, res) => {
     ReactDOMServer.renderToStaticNodeStream(<Html scripts={jsFiles}>

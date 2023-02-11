@@ -1,9 +1,9 @@
-import { booleanControl } from "../../../../.storybook/libs/stories-utils";
+import { booleanControl } from "../../../../../.storybook/libs/stories-utils";
 import {CardRadio, CardRadioProps} from "./index";
 import { ComponentStory } from "@storybook/react";
 
 export default {
-    title: "shared/CardRadio",
+    title: "shared/cards/CardRadio",
     component: CardRadio,
     argTypes: {
         checked: booleanControl()

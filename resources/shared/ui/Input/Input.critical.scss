@@ -11,6 +11,7 @@
         height: toRem(40);
         padding: 0 toRem(10);
         color: var(--textBase);
+        text-align: inherit;
 
         &::placeholder {
             color: var(--textSecondary);

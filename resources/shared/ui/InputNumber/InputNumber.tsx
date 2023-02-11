@@ -12,7 +12,7 @@ export type InputNumberProps = {
 } & InputNumberHandlers & DefaultProps
 
 export type InputNumberHandlers = {
-    changeHandler: (value: InputNumberProps['value']) => void
+    changeHandler: (newValue: InputNumberProps['value']) => void
 }
 
 type ChangeOperation = 'minus' | 'plus' | 'input'
@@ -31,6 +31,8 @@ export default function InputNumber(props: InputNumberProps) {
         } else {
             newValue = Number(inputValue)
         }
+
+        console.log(newValue)
 
         const valid = validate(newValue)
 
@@ -73,6 +75,7 @@ export default function InputNumber(props: InputNumberProps) {
             disabled={isButtonDisabled('minus')}
             className={`input-number__button input-number__button--minus`}
             ariaLabel="minus"
+            view="flat"
 
             clickHandler={() => onChange('minus')}
         />
@@ -84,6 +87,7 @@ export default function InputNumber(props: InputNumberProps) {
             disabled={isButtonDisabled('plus')}
             className={`input-number__button input-number__button--plus`}
             ariaLabel="minus"
+            view="flat"
 
             clickHandler={() => onChange('plus')}
         />
@@ -108,9 +112,13 @@ export default function InputNumber(props: InputNumberProps) {
 
     return (
         <div className="input-number">
-            {buttonMinus}
+            <div className="input-number__wrapper input-number__wrapper--left">
+                {buttonMinus}
+            </div>
             {input}
-            {buttonPlus}
+            <div className="input-number__wrapper input-number__wrapper--right">
+                {buttonPlus}
+            </div>
         </div>
     )
 }

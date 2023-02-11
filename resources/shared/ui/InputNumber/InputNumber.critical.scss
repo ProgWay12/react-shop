@@ -1,0 +1,24 @@
+.input-number {
+    display: flex;
+    width: toRem(132);
+    background-color: var(--backgroundBase);
+    border: 1px solid var(--borderBase);
+    border-radius: $borderRadiusXS;
+
+    &__wrapper {
+        padding: toRem(4);
+
+        &--left {
+            border-right: 1px solid var(--borderBase);
+        }
+
+        &--right {
+            border-left: 1px solid var(--borderBase);
+        }
+    }
+
+    &__value {
+        width: toRem(52);
+        text-align: center;
+    }
+}
